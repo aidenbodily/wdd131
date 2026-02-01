@@ -68,9 +68,47 @@ footer {
     padding: 15px;
 }
 
+dialog {
+    max-width: 95%;
+    max-height: 95vh;
+    border: none;
+    padding: 50px 0 0 0;
+    background: transparent;
+    margin: auto;
+    position: relative;
+    overflow: visible;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+dialog img {
+    max-width: 100%;
+    max-height: 90vh;
+    display: block;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+}
+
 /* mobile width */
 .gallery {
     grid-template-columns: 1fr;
+}
+
+nav {
+    flex-direction: column;
 }
 
 nav a {
@@ -78,6 +116,10 @@ nav a {
 }
 
 .menu-text {
+    display: block;
+}
+
+nav.show a {
     display: block;
 }
 
@@ -92,6 +134,10 @@ nav a {
 @media screen and (min-width: 1000px) {
     .gallery {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    nav {
+        flex-direction: row;
     }
     
     nav a {
