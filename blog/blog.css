@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #000;
+}
+
+header {
+    border-bottom: 3px solid #f4a460;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-top: 2px solid #f4a460;
+    padding-top: 10px;
+}
+
+nav a {
+    color: #c41e3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.article-info {
+    text-align: right;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #333;
+}
+
+.article-info time,
+.article-info .age-range,
+.article-info .category {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rating {
+    color: #ffd700;
+}
+
+h2 {
+    color: #c41e3a;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+article img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 20px;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.article-footer {
+    border-top: 2px solid #f4a460;
+    padding-top: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Larger device styles */
+@media (min-width: 1000px) {
+    body {
+        max-width: 1000px;
+    }
+    
+    nav {
+        justify-content: flex-end;
+        gap: 40px;
+    }
+    
+    article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+        position: relative;
+    }
+    
+    article::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 135px;
+        width: 2px;
+        background-color: #f4a460;
+    }
+    
+    .article-info {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: right;
+    }
+    
+    h2 {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        padding-left: 40px;
+    }
+    
+    article img {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: 100%;
+        margin: 0;
+        padding-left: 40px;
+    }
+    
+    article p {
+        grid-column: 2;
+        grid-row: 3;
+        padding-left: 40px;
+    }
+    
+    .article-footer {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        border-top: 2px solid #f4a460;
+        margin-top: 20px;
+    }
+}
