@@ -56,7 +56,7 @@ articles.forEach(article => {
     </div>
     <h2>${article.title}</h2>
     <img src="${article.imgSrc}" alt="${article.imgAlt}">
-    <p>${article.description}</p>
+    <p class="article-description">${article.description}</p>
     `
     articleElement.innerHTML = html;
     articleList.appendChild(articleElement);

@@ -135,12 +135,19 @@ article p {
         padding-left: 40px;
     }
     
+    .article-description{
+        grid-column: 2;
+        grid-row: 3;
+        padding-left: 40px;
+        margin-top: -30px;
+    }
+
     article p {
         grid-column: 2;
         grid-row: 3;
         padding-left: 40px;
     }
-    
+
     .article-footer {
         grid-column: 1 / -1;
         grid-row: 4;
