@@ -70,7 +70,7 @@ h2 {
 article img {
     display: block;
     max-width: 200px;
-    margin: 0 auto 20px;
+    margin: -140px auto 20px;
 }
 
 article p {
