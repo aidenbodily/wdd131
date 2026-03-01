@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Character Card</title>
+	<link rel="stylesheet" href="character.css" />
+</head>
+<body>
+	<main>
+		<article class="card">
+			<img
+				class="image"
+				id="characterImage"
+				src="snortleblat.webp"
+				alt="Character portrait"
+			/>
+
+			<header>
+				<h1 class="name" id="characterName"></h1>
+			</header>
+
+			<section class="stats">
+				<p><strong>Class:</strong> <span id="characterClass"></span></p>
+				<p><strong>Level:</strong> <span id="characterLevel"></span></p>
+				<p><strong>Health:</strong> <span id="characterHealth"></span></p>
+
+				<p id="statusMessage" class="status-message" aria-live="polite"></p>
+
+				<div class="buttons">
+					<button id="attackBtn" type="button">Attacked</button>
+					<button id="levelBtn" type="button">Level Up</button>
+				</div>
+			</section>
+		</article>
+	</main>
+
+	<script src="character.js"></script>
+</body>
+</html>
