@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeBook</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RecipeBook" />
+    <meta
+      property="og:description"
+      content="Find and explore simple, delicious recipes like Apple Crisp."
+    />
+    <meta property="og:url" content="https://example.com/recipe/" />
+    <meta property="og:image" content="images/social-preview-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RecipeBook" />
+    <meta
+      name="twitter:description"
+      content="Find and explore simple, delicious recipes like Apple Crisp."
+    />
+    <meta name="twitter:image" content="images/social-preview-image.png" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="recipe.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div class="brand">
+          <img src="images/recipe-book.png" alt="Recipe book logo" class="brand-logo" />
+          <h1>RecipeBook</h1>
+        </div>
+
+        <form class="search" role="search">
+          <label for="recipe-search" class="sr-only">Find a recipe</label>
+          <input id="recipe-search" type="text" placeholder="Find a recipe" />
+          <button type="submit" aria-label="Search recipes">
+            <img src="images/search.svg" alt="" aria-hidden="true" />
+          </button>
+        </form>
+      </header>
+
+      <main>
+        <article class="recipe-card">
+          <img
+            class="recipe-image"
+            src="images/apple-crisp.jpg"
+            alt="Apple crisp with vanilla ice cream"
+          />
+
+          <div class="recipe-content">
+            <span class="tag">dessert</span>
+            <h2>Apple Crisp</h2>
+            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star">⭐</span>
+              <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p class="description">
+              This apple crisp recipe is a simple yet delicious fall dessert that's great served warm
+              with vanilla ice cream.
+            </p>
+          </div>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
+          >Recipe icons created by Freepik - Flaticon</a
+        >
+
+        <div class="social">
+          <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+          <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
+          <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
+          <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
