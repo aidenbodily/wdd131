@@ -41,7 +41,7 @@
           <h1>RecipeBook</h1>
         </div>
 
-        <form class="search" role="search">
+        <form class="search" role="search" id="search-form">
           <label for="recipe-search" class="sr-only">Find a recipe</label>
           <input id="recipe-search" type="text" placeholder="Find a recipe" />
           <button type="submit" aria-label="Search recipes">
@@ -50,31 +50,19 @@
         </form>
       </header>
 
-      <main>
-        <article class="recipe-card">
-          <img
-            class="recipe-image"
-            src="images/apple-crisp.jpg"
-            alt="Apple crisp with vanilla ice cream"
-          />
+      <main id="recipes-container"></main>
 
+      <template id="recipe-template">
+        <article class="recipe-card">
+          <img class="recipe-image" src="" alt="" />
           <div class="recipe-content">
-            <span class="tag">dessert</span>
-            <h2>Apple Crisp</h2>
-            <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star">⭐</span>
-              <span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-            <p class="description">
-              This apple crisp recipe is a simple yet delicious fall dessert that's great served warm
-              with vanilla ice cream.
-            </p>
+            <span class="tag"></span>
+            <h2></h2>
+            <span class="rating" role="img" aria-label=""></span>
+            <p class="description"></p>
           </div>
         </article>
-      </main>
+      </template>
 
       <footer class="site-footer">
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons"
@@ -89,5 +77,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="recipe.js"></script>
   </body>
 </html>
