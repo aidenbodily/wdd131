@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 700" width="360" height="700">
+  <style>
+    text { font-family: Arial, sans-serif; fill: #555; }
+    .label { font-size: 11px; text-anchor: middle; }
+    .small { font-size: 9px; text-anchor: middle; fill: #888; }
+  </style>
+
+  <!-- phone outline -->
+  <rect x="10" y="10" width="340" height="680" rx="16" fill="#fff" stroke="#999" stroke-width="2"/>
+
+  <!-- header -->
+  <rect x="10" y="10" width="340" height="55" rx="16" fill="#14472a"/>
+  <rect x="10" y="40" width="340" height="25" fill="#14472a"/>
+  <text x="180" y="38" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Catch the Tortoise</text>
+  <text x="180" y="55" text-anchor="middle" fill="#b5d6c1" font-size="10">A 2-Player Tile Sorting Race</text>
+
+  <!-- about section -->
+  <rect x="24" y="75" width="312" height="170" rx="6" fill="#f0f0f0" stroke="#ccc"/>
+  <rect x="105" y="82" width="150" height="50" rx="4" fill="#ddd" stroke="#bbb"/>
+  <text x="180" y="112" class="small">[Hero Image]</text>
+  <text x="180" y="145" class="label" font-weight="bold">About the Game</text>
+  <line x1="60" y1="158" x2="300" y2="158" stroke="#ccc" stroke-width="1"/>
+  <line x1="50" y1="170" x2="310" y2="170" stroke="#ccc" stroke-width="1"/>
+  <line x1="55" y1="182" x2="305" y2="182" stroke="#ccc" stroke-width="1"/>
+  <line x1="70" y1="194" x2="290" y2="194" stroke="#ccc" stroke-width="1"/>
+  <line x1="55" y1="206" x2="305" y2="206" stroke="#ccc" stroke-width="1"/>
+  <line x1="80" y1="218" x2="280" y2="218" stroke="#ccc" stroke-width="1"/>
+  <line x1="60" y1="230" x2="300" y2="230" stroke="#ccc" stroke-width="1"/>
+
+  <!-- game controls bar -->
+  <rect x="24" y="255" width="200" height="22" rx="4" fill="#f5f5f5" stroke="#ccc"/>
+  <text x="75" y="270" font-size="9" fill="#555">Turn: You | Moves: 0</text>
+  <rect x="240" y="255" width="96" height="22" rx="4" fill="#2ecc71"/>
+  <text x="288" y="270" text-anchor="middle" fill="#111" font-size="9" font-weight="bold">New Game</text>
+
+  <!-- bot grid -->
+  <rect x="24" y="288" width="312" height="100" rx="6" fill="#1b3a2a" stroke="#2c6e49"/>
+  <text x="38" y="302" font-size="9" fill="#ccc">Bot - Bamboo</text>
+  <!-- column numbers -->
+  <g>
+    <rect x="28" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="62" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="96" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="130" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="164" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="198" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="232" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="266" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+    <rect x="300" y="308" width="30" height="14" rx="2" fill="#ddd"/>
+  </g>
+  <!-- tiles grid placeholder -->
+  <g>
+    <rect x="28" y="326" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="344" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="362" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="380" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+  </g>
+
+  <!-- message + hand area -->
+  <text x="180" y="415" class="label" fill="#f1c40f" font-weight="bold">Place [tile] into column 1</text>
+  <text x="180" y="432" class="small">In hand: [tile] → Your column 1</text>
+
+  <!-- player grid -->
+  <rect x="24" y="445" width="312" height="100" rx="6" fill="#1b3a2a" stroke="#2c6e49"/>
+  <text x="38" y="459" font-size="9" fill="#ccc">You - Dots</text>
+  <!-- column numbers -->
+  <g>
+    <rect x="28" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="62" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="96" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="130" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="164" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="198" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="232" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="266" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+    <rect x="300" y="465" width="30" height="14" rx="2" fill="#3498db"/>
+  </g>
+  <!-- tiles -->
+  <g>
+    <rect x="28" y="483" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="501" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="519" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+    <rect x="28" y="537" width="302" height="16" rx="2" fill="#2c6e49" opacity="0.6"/>
+  </g>
+
+  <!-- rules section -->
+  <rect x="24" y="560" width="312" height="90" rx="6" fill="#f0f0f0" stroke="#ccc"/>
+  <text x="180" y="580" class="label" font-weight="bold">Quick Rules</text>
+  <line x1="50" y1="592" x2="310" y2="592" stroke="#ccc"/>
+  <line x1="50" y1="604" x2="310" y2="604" stroke="#ccc"/>
+  <line x1="50" y1="616" x2="310" y2="616" stroke="#ccc"/>
+  <line x1="50" y1="628" x2="310" y2="628" stroke="#ccc"/>
+  <line x1="50" y1="640" x2="310" y2="640" stroke="#ccc"/>
+
+  <!-- footer -->
+  <rect x="10" y="660" width="340" height="30" rx="0" fill="#f9f9f9"/>
+  <rect x="10" y="674" width="340" height="16" rx="16" fill="#f9f9f9"/>
+  <text x="180" y="678" class="small">© 2026 | Play HK Mahjong</text>
+</svg>

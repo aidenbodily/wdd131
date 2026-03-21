@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Plan | Catch the Tortoise</title>
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+    <header>
+        <h1>Catch the Tortoise Mahjong Game Site Plan</h1>
+        <h2>Aiden Bodily</h2>
+        <h2>WDD 131</h2>
+    </header>
+
+    <main>
+        <hr>
+        <h2>Overview</h2>
+        <h3>Purpose</h3>
+        <p>I want to make a fun browser game where you race against a bot to sort Mahjong tiles. You push blanks into columns to pop tiles out, flip them over, and try to get them all sorted before the bot does. Its supposed to be something quick and easy that anyone can just jump into without needing to know anything about Mahjong.</p>
+
+        <h3>Audience</h3>
+        <p>This is for anyone who likes puzzle games or sorting challenges. Mostly people looking for a quick game to play in their browser, like students on a break or anyone who enjoys strategy type games. You dont need to know Mahjong to play it.</p>
+
+        <h3>Dynamic elements</h3>
+        <p>I'm using JavaScript for pretty much the whole game. For DOM stuff I use getElementById to grab elements, then change their textContent and classList to update whats on screen, and addEventListener for all the click handling on the column buttons. Theres a lot of if/else branching because the game has different phases like when youre inserting a blank, placing a tile, or when the bot is taking its turn and each phase needs different logic. Each tile is stored as an object with a suit, number, and whether its face up or not, and I also have a tileEmojis object that maps each tile to its Mahjong emoji character. The grids are arrays of arrays (9 columns with 4 tiles each) and I use Array.from to create them, reduce and filter to count sorted tiles, and forEach to build the buttons and run the bot AI. Theres over 15 functions total for things like shuffling tiles, rendering the board, handling player clicks, bot AI, checking for winners, etc.</p>
+
+        <hr>
+        <h2>Branding</h2>
+        <h3>Website Logo</h3>
+        <img src="tortoise-hero.svg" alt="Catch the Tortoise logo showing a tortoise with mahjong tiles">
+
+        <hr>
+        <h2>Style Guide</h2>
+
+        <h3>Color Palette</h3>
+        <p>Palette URL: https://coolors.co/1a5c32-2ecc71-f1c40f-3498db</p>
+        <table class="colors">
+            <tr>
+                <th>Primary</th>
+                <th>Secondary</th>
+                <th>Accent 1</th>
+                <th>Accent 2</th>
+            </tr>
+            <tr>
+                <td class="primary">#1a5c32</td>
+                <td class="secondary">#2ecc71</td>
+                <td class="accent1">#f1c40f</td>
+                <td class="accent2">#3498db</td>
+            </tr>
+        </table>
+        <p>I went with greens for the main background since it felt like a game table. The yellow and blue are for highlights and interactive buttons so they stand out.</p>
+
+        <h3>Typography</h3>
+        <p>Heading Font: Arial Black</p>
+        <p>Paragraph Font: Arial, Helvetica, sans-serif</p>
+        <p>Normal paragraph example</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Colored paragraph example</p>
+        <p class="colored">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <h3>Navigation</h3>
+        <nav>
+            <a href="tortoise.html">Home</a>
+        </nav>
+        <p>Theres only one page since its a single page game. The nav just links back to the game itself.</p>
+
+        <hr>
+        <h2>Content</h2>
+        <h3>Home page</h3>
+        <p>The page has a header with the game title and a subtitle, and below that theres an about section with a hero image of a tortoise and a couple paragraphs explaining how the game works. The main game area has a turn indicator, move counter, and a new game button at the top, then the bot's grid, a status message area in the middle showing what tile you need to place, and then the player's grid below that. At the bottom theres a quick rules section so people can figure out how to play right away and a footer with a copyright and link to another game. For images I have an SVG hero illustration of a tortoise and I use Mahjong unicode emoji characters for the actual tiles in the game. The game data is 72 tile objects (9 numbers x 4 copies x 2 suits) stored in two 9-column grids.</p>
+
+        <hr>
+        <h2>Wireframes</h2>
+        <h3>Home</h3>
+        <p>This is the mobile wireframe for the game page. It shows the layout with the bot grid on top, status message and hand area in the middle, and the player grid on the bottom.</p>
+        <img src="wireframe.svg" alt="Mobile wireframe showing the page layout">
+    </main>
+</body>
+</html>
