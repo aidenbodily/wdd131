@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catch the Tortoise - a fun tile sorting race game using Mahjong tiles. Race against a bot to sort your tiles first!">
+    <title>Catch the Tortoise | Tile Sorting Game</title>
+    <link rel="stylesheet" href="tortoise.css">
+</head>
+<body>
+    <header>
+        <h1>Catch the Tortoise</h1>
+        <p>A 2-Player Tile Sorting Race</p>
+    </header>
+
+    <main>
+        <div id="sidebar">
+        <!-- intro section with image and description -->
+        <section id="about">
+            <img src="tortoise-hero.svg" alt="A cartoon green tortoise walking across colorful mahjong tiles" width="300" height="180" loading="eager">
+            <h2>About the Game</h2>
+            <p>
+                Catch the Tortoise is a fast-paced sorting race inspired by Mahjong tiles!
+                You and the bot each have a grid of face-down tiles arranged in 9 columns.
+                On your turn, you push a blank space into the top of any column, which
+                forces the bottom tile out. That tile gets flipped face-up and then needs
+                to find its home.
+            </p>
+            <p>
+                If the revealed tile is your suit (Dots), you place it into its matching
+                column number. If it belongs to the bot (Bamboo), it automatically goes
+                to the bot's grid. The chain keeps going until a blank pops out, then you
+                push it back in somewhere new. First player to get all their tiles sorted
+                face-up in the right columns wins!
+            </p>
+        </section>
+
+        <!-- rules reference -->
+        <section id="rules">
+            <h2>Quick Rules</h2>
+            <ul>
+                <li>Each grid has 9 columns with 4 face-down Mahjong tiles.</li>
+                <li>Push a blank into any column to pop the bottom tile out.</li>
+                <li><strong>Dots</strong> tiles always go to your grid, <strong>Bamboo</strong> tiles go to the bot's.</li>
+                <li>A tile is "sorted" when it is face-up in the column matching its number.</li>
+                <li>First player to sort all of their tiles wins the race!</li>
+            </ul>
+        </section>
+        </div>
+
+        <div id="game-content">
+        <!-- game controls -->
+        <section id="game-controls">
+            <div id="info-bar">
+                <span>Turn: <strong id="turn-label">—</strong></span>
+                <span>Moves: <strong id="move-count">0</strong></span>
+            </div>
+            <button id="new-game-btn" type="button">New Game</button>
+        </section>
+
+        <!-- bot's grid -->
+        <section class="grid-area" aria-label="Bot grid">
+            <div class="grid-label">
+                <span class="label-name">🤖 Bot</span>
+                <span class="label-suit bamboo">Bamboo</span>
+                <span class="label-score">Sorted: <strong id="bot-score">0</strong></span>
+            </div>
+            <div class="col-nums" id="bot-col-nums"></div>
+            <div class="grid" id="bot-grid"></div>
+        </section>
+
+        <!-- status message + tile in hand -->
+        <p id="message" role="status" aria-live="polite"></p>
+        <div id="hand-area" class="hidden" aria-live="polite">
+            <span id="hand-label">In hand:</span>
+            <span id="hand-tile"></span>
+            <span id="hand-dest"></span>
+        </div>
+
+        <!-- player's grid -->
+        <section class="grid-area" aria-label="Player grid">
+            <div class="grid-label">
+                <span class="label-name">😊 You</span>
+                <span class="label-suit dots">Dots</span>
+                <span class="label-score">Sorted: <strong id="player-score">0</strong></span>
+            </div>
+            <div class="col-nums" id="player-col-nums"></div>
+            <div class="grid" id="player-grid"></div>
+        </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Catch the Tortoise &copy; 2026 Aiden Bodily</p>
+    </footer>
+
+    <script src="tortoise.js"></script>
+</body>
+</html>
